@@ -14,5 +14,19 @@ function openCategory(evt, categoryName) {
 
 // Setta il primo tab attivo all'avvio della pagina
 window.onload = function() {
-    document.getElementsByClassName('tablinks')[0].click();
+    document.getElementsByClassName('tablinks')[0];
 };
+
+function addToCart(productId) {
+    fetch('aggiungi_al_carrello.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'id=' + productId
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.success ? "Prodotto aggiunto al carrello!" : "Errore nell'aggiunta al carrello!");
+    });
+}

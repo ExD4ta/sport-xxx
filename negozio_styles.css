@@ -1,0 +1,142 @@
+    /* Header */
+    body,
+    h1,
+    h2,
+    ul {
+
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
+    body {
+        background-image: url('sfondo_negozio.jpg'); /* Imposta l'immagine di sfondo per la pagina */
+        background-size: cover; /* Assicurati che l'immagine copra l'intera pagina */
+        background-position: center center; /* Centra l'immagine di sfondo */
+        background-repeat: no-repeat; /* Non ripetere l'immagine */
+        background-attachment: fixed; /* L'immagine di sfondo è fissa durante lo scrolling */
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    /* Container principale */
+
+    .container {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+        grid-gap: 20px;
+        margin-top: 15px;
+        margin-left: 10px;
+
+    }
+
+    /* Card del prodotto */
+    .product-card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+        border-width: 3px;
+        border-color: #000000;
+    }
+
+    .product-card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card h3 {
+        background: linear-gradient(to right, #ff3300, #ff6f00);
+        color: #ffffff;
+        padding: 15px 15px;
+        margin-top: 0;
+        font-size: 1.25em;
+    }
+
+    .product-card p {
+        padding: 0 15px;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+    /* Bottoni e azioni */
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        margin-top: 15px;
+        background: #000000;
+        color: white;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background: #ffffff;
+        color: #000000;
+        border-width: 3px;
+        border-color: #000000;
+    }
+
+    /* Aggiungi margine in basso al container */
+    .container {
+        margin-bottom: 30px;
+    }
+
+    /* Stile per il link Home che appare come un pulsante */
+    nav ul a.home-button {
+        background: linear-gradient(to right, #ff3300, #ff6f00);
+        border: 2px solid transparent;
+        border-radius: 20px;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    nav ul a.home-button:hover {
+        background: linear-gradient(to right, #bb0000, #c02600);
+
+    }
+
+    /* Stile per il box del titolo */
+    /* Stile per il box del titolo con margine sinistro aggiunto */
+    .title-box {
+        background-color: #f2f2f2;
+        /* Colore di sfondo del box */
+        border: 3px solid #000000;
+        /* Bordo del box */
+        border-radius: 5px;
+        /* Angoli arrotondati del box */
+        text-align: center;
+        /* Testo centrato all'interno del box */
+        padding: 15px;
+        padding-top: 70px;
+        /* Spazio interno del box */
+        /* Margine esterno del box: top, right, bottom, left */
+        /* Aggiungi una larghezza se vuoi controllare la larghezza del box */
+        width: fit-content;
+    }
