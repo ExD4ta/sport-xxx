@@ -1,7 +1,6 @@
-/* Stili aggiornati per assicurare una corretta visualizzazione */
 body, h2, ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
@@ -68,15 +67,6 @@ nav ul li a.home-button:hover {
     background: linear-gradient(to right, #bb0000, #c02600);
 }
 
-.sport-dropdown {
-    margin-top: 10px; /* Distanza dal pulsante Home */
-    display: block; /* Elemento a blocco per utilizzare la larghezza completa */
-    width: 10%; /* Utilizza la larghezza completa dell'header */
-    padding: 10px; /* Padding coerente con il pulsante Home */
-    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
-    text-align: center;
-    display: inline-block;
-}
 img {
     max-width: 95%;
     height: auto;
@@ -86,32 +76,45 @@ img {
 }
 
 .container {
-    display: block;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
-    grid-gap: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    height: 80vh; /* Full height */
+    width: 100%; /* Full width */
+    margin: 0 auto;
+    padding: 0;
 }
 
-.product-card {
+.product-details {
+    margin-top: 60px;
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-left: 22px;
-    margin-bottom: 20px;
-    width: 291px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 15px;
+    padding: 20px;
+    width: auto;
+    max-width: 600px; /* Maximum width */
     box-sizing: border-box;
 }
 
-.product-card:hover {
+.product-details:hover {
     box-shadow: rgba(0, 0, 0, 0.2);
 }
-
+.negozio-button {
+    background: linear-gradient(to right, #ff3300, #ff6f00);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.negozio-button:hover {
+    background: linear-gradient(to right, #bb0000, #c02600);
+}
 .button {
     display: block;
     width: 86%;
