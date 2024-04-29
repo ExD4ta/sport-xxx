@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM articolo"; // Sostituisci 'prodotti' con il nome reale della tua tabella
+$sql = "SELECT * FROM articolo WHERE quantita > 0"; // Sostituisci 'prodotti' con il nome reale della tua tabella
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

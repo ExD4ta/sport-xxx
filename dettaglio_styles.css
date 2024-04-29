@@ -78,9 +78,10 @@ nav ul li a.home-button:hover {
 }
 
 img {
-    max-width: 95%;
+    max-width: 98%;
     height: auto;
     border-radius: 25px;
+    margin-top: 10px;
     margin-left: 6px;
     margin-right: 6px;
 }
@@ -88,14 +89,14 @@ img {
 .container {
     display: flex;
     justify-content: center;
-    height: 83vh; /* Full height */
+    height: 85vh; /* Full height */
     width: 100%; /* Full width */
     margin: 0 auto;
     padding: 0;
 }
 
 .product-details {
-    margin-top: 40px;
+    margin-top: 35px;
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;

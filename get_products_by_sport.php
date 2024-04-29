@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 
 $sport = isset($_GET['sport']) ? $_GET['sport'] : '';
 
-$sql = "SELECT id_articolo, nome, costo, quantita FROM articolo WHERE sport = ?";
+$sql = "SELECT id_articolo, nome, costo, quantita FROM articolo WHERE sport = ? AND quantita > 0";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $sport);
 $stmt->execute();
