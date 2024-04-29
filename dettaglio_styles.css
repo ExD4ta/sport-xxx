@@ -25,6 +25,16 @@ h3 {
     border-radius: 5px;
 }
 
+h2 {
+    margin-left: 6px;
+    margin-right: 6px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #ff3300, #ff6f00);
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
 body {
     background-image: url('sfondo_negozio.jpg');
     background-size: cover;
@@ -78,14 +88,14 @@ img {
 .container {
     display: flex;
     justify-content: center;
-    height: 80vh; /* Full height */
+    height: 83vh; /* Full height */
     width: 100%; /* Full width */
     margin: 0 auto;
     padding: 0;
 }
 
 .product-details {
-    margin-top: 60px;
+    margin-top: 40px;
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;
@@ -116,10 +126,11 @@ img {
     background: linear-gradient(to right, #bb0000, #c02600);
 }
 .button {
+    font-size: 20px;
     display: block;
-    width: 86%;
+    width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 17px;
     margin: 5px auto;
     background: #000000;
     color: white;
