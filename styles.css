@@ -1,5 +1,8 @@
 /* Reset base per alcuni elementi */
-body, h1, h2, ul {
+body,
+h1,
+h2,
+ul {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
@@ -8,14 +11,15 @@ body, h1, h2, ul {
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 header h1 {
     font-size: 2.5em;
     color: #ffffff;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Stile per i tab */
@@ -25,7 +29,7 @@ header h1 {
     gap: 10px;
     flex-wrap: wrap;
     background-color: #333;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
 
@@ -36,7 +40,8 @@ header h1 {
     background-attachment: fixed;
     position: relative;
     width: 100%;
-    height: 75vh; /* Regola questa per modificare l'altezza dell'area di sfondo */
+    height: 75vh;
+    /* Regola questa per modificare l'altezza dell'area di sfondo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,17 +57,22 @@ header h1 {
     background: linear-gradient(to right, #ff3300, #ff6f00);
     color: white;
     border: none;
-    border-radius: 20px;  /* Bordi più arrotondati per un look più moderno */
+    border-radius: 20px;
+    /* Bordi più arrotondati per un look più moderno */
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  /* Ombra più definita */
-    margin: 0 40px; /* Maggiore spaziatura tra i pulsanti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Ombra più definita */
+    margin: 0 40px;
+    /* Maggiore spaziatura tra i pulsanti */
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 .main-button:hover {
     background: linear-gradient(to right, #bb0000, #c02600);
-    transform: translateY(-3px);  /* Effetto di sollevamento */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Ombra aumentata al passaggio del mouse */
+    transform: translateY(-3px);
+    /* Effetto di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    /* Ombra aumentata al passaggio del mouse */
 }
 
 .tablinks {
@@ -81,7 +91,7 @@ header h1 {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
