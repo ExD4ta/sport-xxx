@@ -35,7 +35,7 @@ header h1 {
 
 /* Stili per l'immagine di sfondo e pulsanti */
 .hero-image-container {
-    background: url('sfondo.jpg') no-repeat center center;
+    background: url('immagini/sfondo.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;

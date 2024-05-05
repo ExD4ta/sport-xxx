@@ -35,7 +35,7 @@
         if ($row = $result->fetch_assoc()) {
             echo "<div class='product-details'>";
             echo "<h2>" . htmlspecialchars($row['nome']) . "</h2>";
-            echo "<img src='" . htmlspecialchars($row["nome"]) . ".jpg'>";
+            echo "<img src='immagini/" . htmlspecialchars($row["nome"]) . ".jpg'>";
             echo "<p>Prezzo: €" . htmlspecialchars($row['costo']) . "</p>";
             echo "<p>Quantità disponibile: " . htmlspecialchars($row['quantita']) . "</p>";
             echo "<button id='buyButton' class='button'>Acquista</button>";

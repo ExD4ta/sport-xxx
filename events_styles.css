@@ -1,0 +1,139 @@
+/* Stili per il contenitore degli eventi */
+h2 {
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-top: -5px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #ff3300, #ff6f00);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.scroll-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Aggiunta trasparenza */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s; /* Aggiunta transizione */
+    opacity: 1; /* Imposta opacità iniziale */
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Aggiunta trasparenza */
+}
+
+.scroll-button.hidden {
+    display: none; /* Nascondi il pulsante */
+}
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+/* Stili per il contenitore degli eventi */
+.events-container {
+    overflow-x: scroll; /* Abilita lo scorrimento orizzontale */
+    overflow-y: hidden; /* Nasconde lo scorrimento verticale */
+    white-space: nowrap; /* Impedisce il wrapping del contenuto */
+    margin: 20px;
+    scrollbar-width: none; /* Nasconde la scrollbar */
+    -ms-overflow-style: none; /* Nasconde la scrollbar per Internet Explorer e Microsoft Edge */
+}
+
+
+/* Stili per il contenitore di scorrimento degli eventi */
+.events-scroll-container {
+    display: inline-block; /* Permette al contenitore di scorrimento di adattarsi alla larghezza del contenuto */
+    white-space: nowrap; /* Impedisce il wrapping degli eventi */
+}
+
+/* Stili per gli eventi */
+/* Stili per gli eventi */
+.event {
+    display: inline-block; /* Disponi gli eventi su una riga */
+    vertical-align: top; /* Allinea gli eventi nella parte superiore */
+    margin: 10px; /* Aggiungi margine tra gli eventi */
+    margin-top: 20px;
+    padding: 30px; /* Aggiungi spazio interno agli eventi */
+    border: 3px solid #000000; /* Aggiungi un bordo agli eventi */
+    border-radius: 5px; /* Aggiungi un bordo arrotondato agli eventi */
+    background-color: #fff; /* Sfondo bianco per gli eventi */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Aggiungi ombra agli eventi */
+    width: 69vh; /* Larghezza degli eventi */
+    height: 69vh;
+    overflow: hidden; /* Nasconde eventuali overflow delle immagini */
+}
+
+/* Stili per le immagini all'interno degli eventi */
+.event img {
+    max-width: 100%; /* Imposta la larghezza massima delle immagini al 100% del loro contenitore */
+    height: auto; /* Imposta l'altezza delle immagini automaticamente */
+    border-radius: 25px;
+}
+
+/* Stili per l'intestazione della pagina degli eventi */
+.events-header {
+    background-color: #333;
+    color: white;
+    padding: 8px;;
+    text-align: center;
+}
+
+/* Stili per il footer della pagina degli eventi */
+/* Stili per il footer della pagina degli eventi */
+.events-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+.sport-dropdown {
+    margin-top: 10px; /* Distanza dal pulsante Home */
+    display: block; /* Elemento a blocco per utilizzare la larghezza completa */
+    width: 10%; /* Utilizza la larghezza completa dell'header */
+    padding: 10px; /* Padding coerente con il pulsante Home */
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+    text-align: center;
+    display: inline-block;
+}
+/* Stile del pulsante Home */
+.home-button {
+    background: linear-gradient(to right, #ff3300, #ff6f00);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.home-button:hover {
+    background: linear-gradient(to right, #bb0000, #c02600);
+}
+
+body {
+    background-image: url('immagini/sfondo_eventi.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: 'Arial', sans-serif;
+}

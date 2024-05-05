@@ -1,10 +1,20 @@
 /* Stili base per la sezione notizie */
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
-
+h2{
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #ff3300, #ff6f00);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 /* Intestazione per la sezione notizie */
 .news-header {
     background-color: #333;
@@ -12,15 +22,37 @@ body, h1, h2, p {
     padding: 10px;
     text-align: center;
 }
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 /* Articoli di notizie */
 .article {
     margin: 20px;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-right: 3%;
     padding: 15px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 3px solid #000000;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Stile per il contenitore delle notizie */
+.news-container {
+    max-height: 79vh; /* Altezza massima del contenitore */
+    overflow-y: auto; /* Abilita lo scorrimento verticale se le notizie superano l'altezza massima */
+    margin: 20px;
+    margin-left: 60%;
+    padding: 10px;
+    background-color: #ddd;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    scrollbar-width: none; /* Nasconde la scrollbar */
+    -ms-overflow-style: none; /* Nasconde la scrollbar per Internet Explorer e Microsoft Edge */
 }
 
 .article h2 {
@@ -28,7 +60,7 @@ body, h1, h2, p {
 }
 
 .article p {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 .sport-dropdown {
     margin-top: 10px; /* Distanza dal pulsante Home */
@@ -42,9 +74,14 @@ body, h1, h2, p {
 /* Footer specifico per la sezione notizie */
 .news-footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
     color: white;
+}
+body {
+    background-image: url('immagini/sfondo_news.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .home-button {
     background: linear-gradient(to right, #ff3300, #ff6f00);

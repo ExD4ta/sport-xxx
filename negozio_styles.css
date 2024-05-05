@@ -1,4 +1,8 @@
 /* Stili aggiornati per assicurare una corretta visualizzazione */
+.all{
+    scrollbar-width: none; /* Nasconde la scrollbar */
+    -ms-overflow-style: none; /* Nasconde la scrollbar per Internet Explorer e Microsoft Edge */
+}
 body, h2, ul {
     margin: 0px;
     padding: 0px;
@@ -27,11 +31,13 @@ h3 {
 }
 
 body {
-    background-image: url('sfondo_negozio.jpg');
+    background-image: url('immagini/sfondo_negozio.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    scrollbar-width: none; /* Nasconde la scrollbar */
+    -ms-overflow-style: none; /* Nasconde la scrollbar per Internet Explorer e Microsoft Edge */
 }
 
 header {
@@ -83,6 +89,8 @@ img {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 10px;
+    scrollbar-width: none; /* Nasconde la scrollbar */
+    -ms-overflow-style: none; /* Nasconde la scrollbar per Internet Explorer e Microsoft Edge */
 }
 
 .product-card {
