@@ -41,16 +41,7 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a.home-button {
+.home-button {
     background: linear-gradient(to right, #ff3300, #ff6f00);
     color: white;
     padding: 10px 20px;
@@ -64,7 +55,7 @@ nav ul li a.home-button {
     transition: all 0.3s ease;
 }
 
-nav ul li a.home-button:hover {
+.home-button:hover {
     background: linear-gradient(to right, #bb0000, #c02600);
 }
 

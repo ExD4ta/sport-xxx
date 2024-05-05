@@ -7,32 +7,29 @@
 </head>
 <body>
     <header>
+    <div class="news-header">
         <h1>Negozio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="home-button">Home</a></li>
-            </ul>
-            <!-- Dropdown per selezionare lo sport posizionato direttamente sotto il pulsante Home -->
-            <select id="sportFilter" onchange="filterProductsBySport()" class="sport-dropdown">
-                <option value="">tutto</option>
-                <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "sport-xxx";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Connessione fallita: " . $conn->connect_error);
-                }
-                $sql_sport = "SELECT nome_sport FROM sport";
-                $result_sport = $conn->query($sql_sport);
-                while ($row_sport = $result_sport->fetch_assoc()) {
-                    echo "<option value='" . htmlspecialchars($row_sport['nome_sport']) . "'>" . htmlspecialchars($row_sport['nome_sport']) . "</option>";
-                }
-                $conn->close();
-                ?>
-            </select>
-        </nav>
+
+        <a href="index.html" class="home-button">Home</a>
+        <select id="sportFilter" onchange="filterProductsBySport()" class="sport-dropdown">
+            <option value="">tutto</option>
+            <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "sport-xxx";
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            if ($conn->connect_error) {
+                die("Connessione fallita: " . $conn->connect_error);
+            }
+            $sql_sport = "SELECT nome_sport FROM sport";
+            $result_sport = $conn->query($sql_sport);
+            while ($row_sport = $result_sport->fetch_assoc()) {
+                echo "<option value='" . htmlspecialchars($row_sport['nome_sport']) . "'>" . htmlspecialchars($row_sport['nome_sport']) . "</option>";
+            }
+            ?>
+        </select>
+    </div>
     </header>
     <div class="container">
         <div id="productsContainer">
