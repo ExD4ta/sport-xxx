@@ -1,20 +1,33 @@
 <?php
+// Connettersi al database
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "sport-xxx";
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificare la connessione
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connessione fallita: " . $conn->connect_error);
 }
 
 $sport = isset($_GET['sport']) ? $_GET['sport'] : '';
 
-$sql = "SELECT * FROM news WHERE sport = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $sport);
-$stmt->execute();
-$result = $stmt->get_result();
+// Preparare la query SQL in base al filtro sportivo
+if (empty($sport)) {
+    $query = "SELECT * FROM news"; // Nessun filtro applicato
+} else {
+    $query = $conn->prepare("SELECT * FROM news WHERE sport = ?");
+    $query->bind_param("s", $sport);
+}
+
+// Esecuzione della query e invio dei risultati
+if ($query instanceof mysqli_stmt) {
+    $query->execute();
+    $result = $query->get_result();
+} else {
+    $result = $conn->query($query);
+}
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -25,7 +38,8 @@ if ($result->num_rows > 0) {
         echo '</div>';
     }
 } else {
-    echo "Nessun prodotto disponibile per lo sport selezionato.";
+    echo '<div class="article">Nessuna notizia trovata per lo sport selezionato.</div>';
 }
+
 $conn->close();
 ?>

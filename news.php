@@ -53,29 +53,11 @@ $result = $conn->query($sql);
         </select>
     </div>
 
-    <div class="news-container">
-        <?php
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                echo '<div class="article">';
-                echo '<h2>' . htmlspecialchars($row["titolo"]) . '</h2>';
-                echo '<p>' . nl2br(htmlspecialchars($row["testo"])) . '</p>';
-                echo '<p> Pubblicato il ' . date('d/m/Y', strtotime($row['data'])) . ' alle ' . date('H:i', strtotime($row['ora'])) . '</p>';
-                echo '</div>';
-            }
-        } else {
-            echo '<div class="article"><p>Nessuna notizia disponibile.</p></div>';
-        }
-        ?>
-    </div>
+    <div id="news-container" class="news-container">
 
-    <div class="news-footer">
-        <p>&copy; 2024 Negozio Articoli Sportivi. Tutti i diritti riservati.</p>
     </div>
-
     <?php $conn->close(); ?>
-    <script src="scripts.js"></script>
+    <script src="news_script.js"></script>
 </body>
 
 </html>

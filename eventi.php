@@ -91,9 +91,6 @@
         ?>
     </div>
 
-    <div class="events-footer">
-        <p>&copy; 2024 Negozio Articoli Sportivi. Tutti i diritti riservati.</p>
-    </div>
     <script>
         // Funzione per scorrere gli eventi a sinistra
         document.getElementById("scrollLeftButton").addEventListener("click", function() {

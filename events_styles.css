@@ -91,14 +91,6 @@ h2 {
 
 /* Stili per il footer della pagina degli eventi */
 /* Stili per il footer della pagina degli eventi */
-.events-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
 
 
 .sport-dropdown {
