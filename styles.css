@@ -54,21 +54,23 @@ header h1 {
 .main-button {
     padding: 30px 60px;
     font-size: 36px;
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     color: white;
     border: none;
     border-radius: 20px;
     /* Bordi più arrotondati per un look più moderno */
+    font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     /* Ombra più definita */
     margin: 0 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* Maggiore spaziatura tra i pulsanti */
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 .main-button:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
+    background: linear-gradient(to right, #2a006e, #8f0058);
     transform: translateY(-3px);
     /* Effetto di sollevamento */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
@@ -76,8 +78,7 @@ header h1 {
 }
 
 .tablinks {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
-    border: 2px solid transparent;
+    background: linear-gradient(to right, #4600b6, #e4008c);
     border-radius: 20px;
     color: white;
     padding: 10px 20px;
@@ -96,5 +97,8 @@ header h1 {
 }
 
 .tablinks:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
+    background: linear-gradient(to right, #2a006e, #8f0058);
+    transform: translateY(-3px);
+    /* Effetto di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }

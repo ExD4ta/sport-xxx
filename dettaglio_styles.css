@@ -20,7 +20,7 @@ h3 {
     margin-right: 6px;
     font-family: 'Arial', sans-serif;
     color: white;
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -30,7 +30,7 @@ h2 {
     margin-right: 6px;
     font-family: 'Arial', sans-serif;
     color: white;
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     padding: 20px 20px;
     border-radius: 5px;
 }
@@ -60,7 +60,7 @@ nav ul li {
 }
 
 nav ul li a.home-button {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -74,7 +74,7 @@ nav ul li a.home-button {
 }
 
 nav ul li a.home-button:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
+    background: linear-gradient(to right, #2a006e, #8f0058);
 }
 
 img {
@@ -111,7 +111,7 @@ img {
     box-shadow: rgba(0, 0, 0, 0.2);
 }
 .negozio-button {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -124,7 +124,7 @@ img {
     transition: all 0.3s ease;
 }
 .negozio-button:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
+    background: linear-gradient(to right, #2a006e, #8f0058);
 }
 .button {
     font-size: 20px;

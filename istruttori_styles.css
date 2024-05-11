@@ -1,114 +1,116 @@
-body, h2, ul {
+/* Stili base per la sezione notizie */
+
+body, h1, h2, p {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
-
-h1 {
+h2{
     margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    margin: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
     font-family: 'Arial', sans-serif;
     color: white;
-    background: linear-gradient(to right, #ff3300, #ff6f00);
-    padding: 20px;
+    background: linear-gradient(to right, #4600b6, #e4008c);
+    padding: 10px 20px;
     border-radius: 5px;
 }
-
-body {
-    background-image: url('sfondo_scuola.jpg'); /* Immagine di sfondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-header {
+/* Intestazione per la sezione notizie */
+.instructor-header {
     background-color: #333;
     color: white;
     padding: 10px;
     text-align: center;
 }
-
-nav ul {
-    list-style: none;
+p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-nav ul li {
-    display: inline;
+/* Stile per il contenitore delle notizie */
+.instructor-container {
+    max-height: 79vh; /* Altezza massima del contenitore */
+    overflow-y: auto; /* Abilita lo scorrimento verticale se le notizie superano l'altezza massima */
+    margin-left: 20px; /* Centra il contenitore */
+    padding: 10px;
+    background-color: #ddd;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra gli elementi lungo l'asse principale */
+    width: 80%; /* Larghezza del contenitore */
 }
 
-nav ul li a {
-    text-decoration: none;
+img {
+    max-width: 97%;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+/* Articoli di notizie */
+.article {
+    width: calc(30% - 20px); /* Larghezza massima per massimo 3 istruttori per riga */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 15px;
+    background-color: #fff;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-nav ul li a.home-button {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+/* Imposta margin-right solo per gli istruttori che non sono sull'ultima riga */
+.article:nth-child(3n) {
+    margin-right: 0;
+}
+
+
+/* Articoli di notizie */
+.article h2 {
+    color: #ffffff;
+}
+
+.article p {
+    margin-top: 15px;
+}
+.sport-dropdown {
+    margin-top: 10px; /* Distanza dal pulsante Home */
+    display: block; /* Elemento a blocco per utilizzare la larghezza completa */
+    width: 10%; /* Utilizza la larghezza completa dell'header */
+    padding: 10px; /* Padding coerente con il pulsante Home */
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+    text-align: center;
+    display: inline-block;
+}
+/* Footer specifico per la sezione notizie */
+
+body {
+    background-image: url('immagini/sfondo_istruttori.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.home-button {
+    background: linear-gradient(to right, #4600b6, #e4008c);
     color: white;
     padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
-
-nav ul li a.home-button:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
-}
-
-img {
-    max-width: 98%;
-    height: auto;
-    border-radius: 25px;
-    margin-top: 10px;
-}
-
-/* Box del Singolo Insegnante */
-.teacher-card {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px; /* Più grande del box degli articoli */
-    margin: 10px;
-    width: 400px; /* Più squadrato */
-}
-
-.teacher-card:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-.teacher-card h3 {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px; /* Distanza tra titolo e contenuto */
-}
-
-.teacher-card p {
-    font-size: 16px; /* Dimensione del testo dei paragrafi */
-    margin-bottom: 10px;
-}
-
-.button {
-    font-size: 18px;
-    text-align: center;
-    padding: 15px;
-    margin: 10px auto; /* Margine extra per separazione tra box */
-    background: #000000;
-    color: white;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.button:hover {
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
+.home-button:hover {
+    background: linear-gradient(to right, #2a006e, #8f0058);
 }

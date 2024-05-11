@@ -11,7 +11,7 @@ h2{
     margin-right: 3px;
     font-family: 'Arial', sans-serif;
     color: white;
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -56,7 +56,7 @@ p {
 }
 
 .article h2 {
-    color: #333;
+    color: #ffffff;
 }
 
 .article p {
@@ -81,7 +81,7 @@ body {
     background-attachment: fixed;
 }
 .home-button {
-    background: linear-gradient(to right, #ff3300, #ff6f00);
+    background: linear-gradient(to right, #4600b6, #e4008c);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -94,5 +94,5 @@ body {
     transition: all 0.3s ease;
 }
 .home-button:hover {
-    background: linear-gradient(to right, #bb0000, #c02600);
+    background: linear-gradient(to right, #2a006e, #8f0058);
 }
