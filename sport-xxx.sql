@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 11, 2024 alle 16:43
--- Versione del server: 10.4.28-MariaDB
--- Versione PHP: 8.1.17
+-- Creato il: Mag 16, 2024 alle 23:43
+-- Versione del server: 10.4.32-MariaDB
+-- Versione PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,11 +40,11 @@ CREATE TABLE `articolo` (
 --
 
 INSERT INTO `articolo` (`nome`, `id_articolo`, `quantita`, `costo`, `sport`) VALUES
-('palle', '1', 3, 44.99, 'misto'),
-('giubbotto termico', '10', 2, 60, 'snowboard'),
+('palle', '1', 4, 44.99, 'misto'),
+('giubbotto termico', '10', 3, 60, 'snowboard'),
 ('scalda collo', '11', 4, 14.99, 'snowboard'),
 ('cera', '12', 2, 6.99, 'snowboard'),
-('io quando', '2', 91, 2499.99, 'misto'),
+('io quando', '2', 92, 2499.99, 'misto'),
 ('scarponi', '3', 3, 99, 'snowboard'),
 ('tavola da snowboard', '4', 4, 299.49, 'snowboard'),
 ('differenziale', '5', 0, 580, 'drifting'),
@@ -71,10 +71,17 @@ CREATE TABLE `carello` (
 --
 
 CREATE TABLE `cliente` (
-  `utente` varchar(255) NOT NULL,
-  `indirizzo` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dump dei dati per la tabella `cliente`
+--
+
+INSERT INTO `cliente` (`username`, `password`) VALUES
+('EXD4TA', '1'),
+('Paolo', 'aa');
 
 -- --------------------------------------------------------
 
@@ -111,7 +118,7 @@ CREATE TABLE `insegnati` (
   `nome` varchar(255) NOT NULL,
   `codice_fiscale` varchar(255) NOT NULL,
   `cognome` varchar(255) NOT NULL,
-  `descrizione` varchar(255) NOT NULL,
+  `descrizione` varchar(4096) NOT NULL,
   `sport` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -121,8 +128,10 @@ CREATE TABLE `insegnati` (
 
 INSERT INTO `insegnati` (`nome`, `codice_fiscale`, `cognome`, `descrizione`, `sport`) VALUES
 ('Andrea', 'BLTNDR02P44A662D', 'Beltramelli', 'ti insegna a fare gwagwa banene', 'misto'),
+('Andrea', 'BLTNDR65A01D325E', 'Beltramello', 'Tostapane in orbita, una nuvola di spaghetti al neon, un concerto di tigri sotto il divano. Un ombrello aperto in un bicchiere d\'acqua, una valigia piena di eco, dei quadrati di luce in salsa di stelle. Risate di cartone, un viaggio nel tempo su un rullin', 'snowboard'),
 ('Io', 'QNDIOX80A01D325J', 'Quando ', 'io... quando...', 'misto'),
-('Edoardo', 'SRTDRD24E11D325X', 'Sartori', 'ti insegna a fare le daily', 'snowboard');
+('Edoardo', 'SRTDRD24E11D325X', 'Sartori', 'ti insegna a fare le daily', 'snowboard'),
+('amba', 'TCMMBA80A01D325N', 'tacam', 'Lampadina blu vola su pizza cosmica, giraffa al chilometro, cacofonia di spugne felici. Salto quantico in un bicchiere di nebbia, ruggine sotto un treno di parole, venti di domenica senza orologi. Huge asss Arance cantano di geometria, pioggia di matite s', 'paracadutismo');
 
 -- --------------------------------------------------------
 
@@ -171,7 +180,9 @@ CREATE TABLE `noleggio` (
   `costo_noleggio` float NOT NULL,
   `datafine` varchar(255) NOT NULL,
   `negozio` varchar(255) NOT NULL,
-  `id_articolo` varchar(255) NOT NULL
+  `id_articolo` varchar(255) NOT NULL,
+  `id_noleggio` int(255) NOT NULL,
+  `utente` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -190,10 +201,10 @@ CREATE TABLE `sport` (
 --
 
 INSERT INTO `sport` (`nome_sport`, `descrizione`) VALUES
-('drifting', 'portare la propria auto di traverso'),
-('misto', 'attrezzi misti'),
-('paracadutismo', 'lanciarsi da una altura notevole'),
-('snowboard', 'sport simile allo scii');
+('drifting', 'i'),
+('misto', 'i'),
+('paracadutismo', 'i'),
+('snowboard', 'a');
 
 --
 -- Indici per le tabelle scaricate
@@ -216,7 +227,7 @@ ALTER TABLE `carello`
 -- Indici per le tabelle `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`utente`,`password`);
+  ADD PRIMARY KEY (`username`) USING BTREE;
 
 --
 -- Indici per le tabelle `evento`
@@ -248,8 +259,10 @@ ALTER TABLE `news`
 -- Indici per le tabelle `noleggio`
 --
 ALTER TABLE `noleggio`
-  ADD KEY `viene` (`id_articolo`),
-  ADD KEY `dispone` (`negozio`);
+  ADD PRIMARY KEY (`id_noleggio`),
+  ADD KEY `dispone` (`negozio`),
+  ADD KEY `viene` (`id_articolo`) USING BTREE,
+  ADD KEY `possiede` (`utente`) USING BTREE;
 
 --
 -- Indici per le tabelle `sport`
@@ -271,7 +284,7 @@ ALTER TABLE `articolo`
 -- Limiti per la tabella `carello`
 --
 ALTER TABLE `carello`
-  ADD CONSTRAINT `possiede` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`utente`);
+  ADD CONSTRAINT `possiede` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`username`);
 
 --
 -- Limiti per la tabella `evento`
