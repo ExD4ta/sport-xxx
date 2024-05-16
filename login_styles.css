@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Stili esistenti */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.home-button {
+    background: linear-gradient(to right, #4600b6, #e4008c);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.home-button:hover {
+    background: linear-gradient(to right, #2a006e, #8f0058);
+}
+.login-container {
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #b3b3b3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background-color: #555;
+}
+
+button.login-button, button.logout-button, button.user-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button.login-button:hover, button.logout-button:hover, button.user-button:hover {
+    background-color: #555;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.tab button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.tab button:hover {
+    background-color: #555;
+}
+
+.hero-image-container {
+    background: url('immagini/sfondo_login.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    /* Regola questa per modificare l'altezza dell'area di sfondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container .button-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-image-container .main-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.hero-image-container .main-button:hover {
+    background-color: #555;
+}

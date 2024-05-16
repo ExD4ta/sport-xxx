@@ -31,8 +31,16 @@ $result = $conn->query($sql);
 <body>
     <div class="news-header">
         <h1>Ultime Notizie</h1>
-
-        <a href="index.html" class="home-button">Home</a>
+        <?php
+        session_start();
+        if (isset($_SESSION['username'])) {
+            echo '<button class="home-button" onclick="window.location.href=\'logout.php\'">' . $_SESSION['username'] . '</button>';
+        } else {
+            echo '<button class="home-button" onclick="window.location.href=\'login.php\'">Login</button>';
+        }
+        ?>
+        <p></p>
+        <a href="index.php" class="home-button">Home</a>
         <select id="newsFilter" onchange="filterNewsBySport()" class="sport-dropdown">
             <option value="">tutto</option>
             <?php

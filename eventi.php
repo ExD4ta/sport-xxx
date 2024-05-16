@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sezione Eventi</title>
     <link rel="stylesheet" href="events_styles.css">
 </head>
+
 <body>
     <div class="events-header">
         <h1>Prossimi Eventi</h1>
 
+        <?php
+        session_start();
+        if (isset($_SESSION['username'])) {
+            echo '<button class="home-button" onclick="window.location.href=\'logout.php\'">' . $_SESSION['username'] . '</button>';
+        } else {
+            echo '<button class="home-button" onclick="window.location.href=\'login.php\'">Login</button>';
+        }
+        ?>
         <!-- Menu a discesa per filtrare gli eventi per sport -->
         <form method="GET">
-        <a href="index.html" class="home-button">Home</a>
+
+            <a href="index.php" class="home-button">Home</a>
             <select id="sportFilter" name="sport" onchange="this.form.submit()" class="sport-dropdown">
                 <option value="">Tutti gli sport</option>
                 <?php
@@ -59,13 +70,13 @@
 
         // Costruisci la query SQL per ottenere gli eventi
         $sql = "SELECT * FROM evento";
-        
+
         // Se è stato selezionato uno sport nel menu a discesa, filtra gli eventi per quello sport
         if (isset($_GET['sport']) && $_GET['sport'] != '') {
             $sport_filter = $_GET['sport'];
             $sql .= " WHERE sport = '$sport_filter'";
         }
-        
+
         // Esegui la query SQL
         $result = $conn->query($sql);
 
@@ -93,12 +104,12 @@
 
     <script>
         // Funzione per scorrere gli eventi a sinistra
-        document.getElementById("scrollLeftButton").addEventListener("click", function() {
+        document.getElementById("scrollLeftButton").addEventListener("click", function () {
             document.getElementById("eventsContainer").scrollBy({ left: -300, behavior: 'smooth' }); // Modificare questo valore per regolare la quantità di scorrimento
         });
 
         // Funzione per scorrere gli eventi a destra
-        document.getElementById("scrollRightButton").addEventListener("click", function() {
+        document.getElementById("scrollRightButton").addEventListener("click", function () {
             document.getElementById("eventsContainer").scrollBy({ left: 300, behavior: 'smooth' }); // Modificare questo valore per regolare la quantità di scorrimento
         });
         // Funzione per gestire la visibilità dei pulsanti di scorrimento
@@ -129,4 +140,5 @@
         handleScrollVisibility();
     </script>
 </body>
+
 </html>

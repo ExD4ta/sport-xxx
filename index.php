@@ -13,7 +13,14 @@
     
     <div class="tab">
         <button class="tablinks" onclick="window.location.href='news.php'">News</button>
-        <button class="tablinks" onclick="openCategory(event, 'Noleggio')">Noleggio</button>
+        <?php
+            session_start();
+            if (isset($_SESSION['username'])) {
+                echo '<button class="tablinks" onclick="window.location.href=\'logout.php\'">'.$_SESSION['username'].'</button>';
+            } else {
+                echo '<button class="tablinks" onclick="window.location.href=\'login.php\'">Login</button>';
+            }
+            ?>
         <button class="tablinks" onclick="window.location.href='eventi.php'">Eventi</button>
     </div>
 
