@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 16, 2024 alle 23:43
+-- Creato il: Mag 19, 2024 alle 22:59
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -91,7 +91,7 @@ INSERT INTO `cliente` (`username`, `password`) VALUES
 
 CREATE TABLE `evento` (
   `id_evento` varchar(255) NOT NULL,
-  `descrizione` varchar(255) NOT NULL,
+  `descrizione` varchar(4096) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `data_inizio` date NOT NULL,
   `data_fine` date NOT NULL,
@@ -104,9 +104,9 @@ CREATE TABLE `evento` (
 --
 
 INSERT INTO `evento` (`id_evento`, `descrizione`, `nome`, `data_inizio`, `data_fine`, `sport`, `indirizzo`) VALUES
-('1', 'alla', 'alla', '2024-05-01', '2024-05-16', 'misto', 'io quando'),
-('2', 'n', 'n', '2024-05-13', '2024-05-30', 'drifting', 'a'),
-('3', '6', '6', '2014-05-09', '2024-05-09', 'snowboard', '6');
+('1', 'Benvenuti al Corridoio del Mistero, un\'escape room avvolta in un\'atmosfera cupa e \ninquietante. Appena varcata la soglia, ti ritroverai in un lungo corridoio oscuro, illuminato \nsolo da una serie di luci soffuse che creano un gioco di ombre sulle pareti grigie e spoglie. \nLa penombra rende ogni passo incerto e amplifica la tensione ad ogni angolo.', 'escape room', '2024-05-01', '2024-05-16', 'misto', 'Antheon, Nisou 2571, Cipro'),
+('2', 'Benvenuti al Drift Kings Showdown, l\'evento di drifting più adrenalinico e spettacolare \ndell\'anno! Questo evento imperdibile riunisce i migliori piloti di drifting da tutto il mondo per \nuna competizione infuocata, dove abilità, precisione e spettacolarità sono messi alla prova in\nuna serie di gare mozzafiato.\nLa location è un circuito appositamente progettato, con curve strette, ampi tornanti e \nrettilinei perfetti per dimostrare il controllo e la maestria al volante. ', 'drifting', '2024-05-13', '2024-05-30', 'drifting', 'Todenweg, 98701 Großbreitenbach, Germania'),
+('3', 'Benvenuti al JDM Legends Meet, il raduno definitivo per gli appassionati delle auto \ngiapponesi da sogno. Questo evento, dedicato ai cultori del Japanese Domestic Market \n(JDM), riunisce le più iconiche e potenti auto giapponesi, offrendo uno spettacolo \nimperdibile per gli amanti dei motori.\nAppena arrivati, sarete accolti dal rombo dei motori turbo e dal profumo inconfondibile \ndella benzina ad alte prestazioni.', 'super raduno', '2014-05-09', '2024-05-09', 'misto', 'Yubiso, Minakami, Distretto di Tone, Prefettura di Gunma 379-1728, Giappone');
 
 -- --------------------------------------------------------
 
@@ -127,11 +127,11 @@ CREATE TABLE `insegnati` (
 --
 
 INSERT INTO `insegnati` (`nome`, `codice_fiscale`, `cognome`, `descrizione`, `sport`) VALUES
-('Andrea', 'BLTNDR02P44A662D', 'Beltramelli', 'ti insegna a fare gwagwa banene', 'misto'),
-('Andrea', 'BLTNDR65A01D325E', 'Beltramello', 'Tostapane in orbita, una nuvola di spaghetti al neon, un concerto di tigri sotto il divano. Un ombrello aperto in un bicchiere d\'acqua, una valigia piena di eco, dei quadrati di luce in salsa di stelle. Risate di cartone, un viaggio nel tempo su un rullin', 'snowboard'),
+('Andrea', 'BLTNDR02P44A662D', 'Beltramelli', 'L\'istruttore nella foto ha capelli ricci e scuri che arrivano appena sopra le spalle. Indossa un maglione chiaro ed è in un ambiente interno con un\'architettura moderna sullo sfondo. Ha una carnagione chiara e lineamenti del viso sottili. Sul capo porta un grande fiore bianco come ornamento. Lo sguardo è diretto e leggermente serio, conferendo un\'aria riflessiva.', 'misto'),
+('Andrea', 'BLTNDR65A01D325E', 'Beltramello', 'L\'istruttore di snowboard nella foto è una persona dinamica e appassionata. Ha capelli ricci e voluminosi di colore scuro, indossa occhiali da vista neri che aggiungono un tocco di serietà al suo aspetto. Il suo abbigliamento casual, con una maglia nera, riflette uno stile pratico e sportivo, ideale per l\'ambiente montano. Sullo sfondo si intravede un\'aula, suggerendo che potrebbe essere anche coinvolto in lezioni teoriche o formazione tecnica. Il suo sguardo attento e l\'espressione decisa trasmettono sicurezza e competenza, qualità fondamentali per un istruttore di snowboard.', 'snowboard'),
 ('Io', 'QNDIOX80A01D325J', 'Quando ', 'io... quando...', 'misto'),
-('Edoardo', 'SRTDRD24E11D325X', 'Sartori', 'ti insegna a fare le daily', 'snowboard'),
-('amba', 'TCMMBA80A01D325N', 'tacam', 'Lampadina blu vola su pizza cosmica, giraffa al chilometro, cacofonia di spugne felici. Salto quantico in un bicchiere di nebbia, ruggine sotto un treno di parole, venti di domenica senza orologi. Huge asss Arance cantano di geometria, pioggia di matite s', 'paracadutismo');
+('Edoardo', 'SRTDRD24E11D325X', 'Sartori', 'L\'istruttore nella foto ha un aspetto professionale e curato. Indossa una camicia bianca, che dona un\'aria formale e pulita. Ha capelli scuri e corti, pettinati con cura. Lo sfondo mostra delle persiane verdi, suggerendo che si trova in un ambiente interno, probabilmente un ufficio o una sala riunioni. Il suo sguardo è sereno e leggermente rivolto di lato, conferendo un\'impressione di calma e riflessività. La sua espressione sobria e composta trasmette affidabilità e competenza, qualità importanti per il ruolo di istruttore.', 'snowboard'),
+('amba', 'TCMMBA80A01D325N', 'tacam', 'L\'istruttore nella foto è un personaggio disegnato in stile fumettistico con un aspetto simpatico e stravagante. Ha una testa bianca, rotonda e priva di dettagli complessi, con occhi grandi e neri che esprimono un\'aria di innocente curiosità. Sulla testa indossa un elicotterino colorato con un\'elica blu, un accessorio giocoso e distintivo che lo rende immediatamente riconoscibile.\n\nLo sfondo suggerisce una giornata soleggiata, con il sole splendente e un cielo azzurro chiaro. L\'istruttore sembra essere una figura amichevole e accessibile, ideale per creare un\'atmosfera rilassata e divertente. ', 'paracadutismo');
 
 -- --------------------------------------------------------
 

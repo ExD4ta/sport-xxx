@@ -63,14 +63,14 @@ h2 {
     display: inline-block; /* Disponi gli eventi su una riga */
     vertical-align: top; /* Allinea gli eventi nella parte superiore */
     margin: 10px; /* Aggiungi margine tra gli eventi */
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 30px; /* Aggiungi spazio interno agli eventi */
     border: 3px solid #000000; /* Aggiungi un bordo agli eventi */
     border-radius: 5px; /* Aggiungi un bordo arrotondato agli eventi */
     background-color: #fff; /* Sfondo bianco per gli eventi */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Aggiungi ombra agli eventi */
-    width: 69vh; /* Larghezza degli eventi */
-    height: 69vh;
+    width: 65vh; /* Larghezza degli eventi */
+    height: 65vh;
     overflow: hidden; /* Nasconde eventuali overflow delle immagini */
 }
 

@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
             header("Location: index.php");
         } else {
-            echo "Username o password errati!";
         }
     }
 }
